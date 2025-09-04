@@ -12,17 +12,22 @@
     right: 0;
     bottom: 0;
     opacity: 0.3;
-
+    
   }
   .content{
+    position: relative;
     text-align: center;
+    z-index: 1;
   
   }
   p.bold {
     font-weight: 700;
   }
 }
-
+li {
+    /* list-style-type: disc;   */
+    list-style-position: inside;
+}
 
 /* .banner .content{
   text-align: center;
