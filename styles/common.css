@@ -9,6 +9,10 @@
   font-size: 20px;
 }
 
+* {
+  box-sizing: border-box;
+  outline: 2px green dashed;
+}
 
 .main-bg {
   background-color: var(--bg-color);
@@ -18,3 +22,36 @@
   font-family: var(--main-font-family);
 }
 
+a.hidden {
+  display: none;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+}
+
+@media print {
+  * {
+    color: rebeccapurple;
+  }
+
+  header.header,
+  section.banner,
+  footer.footer {
+    display: none;
+  }
+}
+
+/* @media screen  and (prefers-color-schema: light) {
+
+
+  :root{
+    --bg-color: #FFF;
+    --main-text-color: #000;
+  }
+} */
+
+
+@media screen and (width > 768px) {
+  a.hidden {
+    display: block;
+  }
+}

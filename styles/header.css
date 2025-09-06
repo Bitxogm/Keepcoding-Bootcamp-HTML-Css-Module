@@ -1,4 +1,8 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
   background-color: var(--bg-color);
   position: sticky;
   top: 0;
@@ -11,9 +15,12 @@
 
   .nav{
     ul.list{
+      display: flex;
+      gap: 10px;
       list-style: none;
       margin: 0;
       padding: 0;
     }
   }
 }
+

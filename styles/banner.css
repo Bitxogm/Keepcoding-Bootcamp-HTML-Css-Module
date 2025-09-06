@@ -4,6 +4,9 @@
   background-size: contain;
   background-position: top center; */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .image {
     background-image: url('../assets/app/catalog.jpg');
     position: absolute;
