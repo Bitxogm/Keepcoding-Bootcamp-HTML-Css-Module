@@ -27,4 +27,12 @@
   text-align: center;
   font-weight: 100;
   font-style: italic;
+  background: radial-gradient(circle, rgba(155, 61, 42, 1) 0%, rgba(63, 158, 145, 1) 19%, rgba(199, 145, 87, 1) 55%, rgba(147, 208, 113, 1) 73%, rgba(237, 221, 83, 1) 100%);
+}
+
+@media  screen and (width > 768px) {
+  .footer {
+    background: radial-gradient(circle,rgba(87, 68, 68, 1) 0%, rgba(156, 63, 158, 1) 42%, rgba(199, 145, 87, 1) 77%, rgba(147, 208, 113, 1) 91%, rgba(237, 221, 83, 1) 100%);
+  }
+  
 }
