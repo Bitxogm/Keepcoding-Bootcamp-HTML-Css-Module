@@ -1,0 +1,13 @@
+
+
+.container {
+  background-image: url('../assets/app/catalog.jpg');
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem;
+}

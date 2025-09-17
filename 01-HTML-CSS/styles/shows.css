@@ -1,0 +1,29 @@
+.shows {
+  img {
+    width: 100%;
+  }
+
+  .list {
+    display: grid;
+    /* autofit / autofill / min-max(min, max) */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+/* Con media queries */
+/* @media  screen  and (width  > 768px) {
+  .shows{
+    .list{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+} */
+  
