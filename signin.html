@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeFlix signin</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/signin.css ">
+</head>
+<!-- <style> 
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}</style> -->
+
+<body class="main-bg container">
+  <main class="card">
+    <h1>Signin</h1>
+    <!-- <a href="index.html">Go home</a> -->
+    <form method="post" novalidate>
+      <div class="form_input">
+        <label class="sr-only" for="mail">Escribir el email</label>
+        <input type="email" id="mail" name="email" autocomplete="off" placeholder="Ex: email@com" value="@test@test.com"
+          required>
+        <div>
+          <!-- <small>El email es obligatorio</small> -->
+        </div>
+      </div>
+
+      <div class="form_input">
+        <label for="password">Escribir el password</label>
+        <input type="password" id="password" name="password" placeholder="password" required>
+      </div>
+
+      <div class="form_input">
+        <label for="phone">Enter your phone number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="off" required placeholder="123-456-7890"
+          title="Format: 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      </div>
+
+      <div class="form_input">
+        <label for="file">Seleccionar archivo</label>
+        <input type="file" id="file" name="profile" multiple accept="image/png">
+      </div>
+
+      <fieldset>
+        <legend>Fav genre</legend>
+        <label for="shows">Shows</label>
+        <input type="radio" name="genre" id="shows" value="shows" checked>
+        <label for="movies">Movies</label>
+        <input type="radio" name="genre" id="movies" value="movies">
+      </fieldset>
+      <!-- 
+    <fieldset>
+      <legend>Fav programing languaje</legend>
+      <label for="html">HTML</label>
+      <input type="checkbox" name="languaje" id="html" value="html">
+
+      <label for="css">CSS</label>
+      <input type="checkbox" name="languaje" id="css" value="css">
+
+      <label for="js">JS</label>
+      <input type="checkbox" name="languaje" id="js" value="js" checked>
+
+      <label for="python">Python</label>
+      <input type="checkbox" name="languaje" id="python" value="python">
+    </fieldset> -->
+
+      <div class="form_input">
+        <label for="bio">User bio</label>
+        <textarea name="bio" id="bio" placeholder="User bio..." required maxlength="100"></textarea>
+      </div>
+
+      <div>
+        <label for="remember">Remember me</label>
+        <input type="checkbox" name="remember" id="remember" required>
+      </div>
+
+      <div class="form_input">
+        <label for="country">Country</label>
+        <select name="country" id="country">
+          <option value="argentina">Argentina</option>
+          <option value="colombia">Colombia</option>
+          <option value="mexico">Mexico</option>
+          <option value="peru">Peru</option>
+        </select>
+      </div>
+
+      <div>
+        <button class="btn secondary" type="reset">Reset</button>
+        <button class="btn" type="submit">Sign in</button>
+      </div>
+
+      <!-- <input type="submit" value="SubmitInput"> -->
+    </form>
+  </main>
+</body>
+</html>
+    
+
