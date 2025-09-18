@@ -7,6 +7,9 @@
   border-radius: 5px;
   text-decoration: none;
   border: 1px solid var(--main-brand-color);
+  width: 100px;
+  transition:  width 5s linear 2s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   &:hover{
     background-color: blueviolet;
   }
@@ -38,11 +41,62 @@ form {
 }
 
 @media screen and (hover: hover ) {
+  .btn {
+    cursor: pointer;
+  }
 .btn:hover {
-  background-color: aqua;
-  color: red;
+  background-color: rgb(134, 97, 99);
+  /* width: 500px; */
 }
 .btn.secondary:hover {
   background-color: var(--border-color);
 }
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left: 5px solid var(--main-brand-color);
+  animation: spinner 5s infinite ease-in-out;
+
+}
+
+.progress {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-brand-color);
+  border-radius: 5px;
+  position:  fixed;
+  animation: progress 5s linear;
+  animation-fill-mode: forwards;
+  animation-timeline: scroll();
+  top: 0;
+  z-index: 999;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  /* .spinner{
+    animation: none;
+  } */
+} 
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+    border-color: aqua;
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+@keyframes progress {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+    
 }

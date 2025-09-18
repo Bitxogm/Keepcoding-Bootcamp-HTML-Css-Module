@@ -20,6 +20,12 @@
   box-sizing: border-box;
   /* outline: 2px green dashed; */
 }
+h5 {
+  transition: color  1s ease-in-out;
+}
+h5:hover{
+  color: red;
+}
 
 .src-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);

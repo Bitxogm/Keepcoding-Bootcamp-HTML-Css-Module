@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter - Ofertas Especiales</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=DM+Serif+Text:ital@0;1&family=Montserrat+Alternates:ital,wght@0,400;0,700;1,300&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset básico para emails */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-family: 'Montserrat Alternates', Arial, sans-serif;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        /* Estilos principales */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            font-family: 'Montserrat Alternates', Arial, sans-serif;
+        }
+        .header {
+            background-color: #2c5282;
+            color: #ffffff;
+        }
+        .header h1 {
+            font-family: 'DM Serif Text', Georgia, serif;
+        }
+        .content {
+            background-color: #ffffff;
+        }
+        .content h2 {
+            font-family: 'DM Serif Text', Georgia, serif;
+        }
+        .decorative-text {
+            font-family: 'Bad Script', cursive;
+        }
+        .gothic-text {
+            font-family: 'UnifrakturCook', cursive;
+        }
+        .footer {
+            background-color: #f7fafc;
+            color: #666666;
+        }
+        .button {
+            background-color: #3182ce;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-table td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: center;
+        }
+        .product-table th {
+            background-color: #edf2f7;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            font-weight: bold;
+        }
+        .price-original {
+            text-decoration: line-through;
+            color: #999999;
+        }
+        .price-discount {
+            color: #e53e3e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f7fafc;">
+    
+    <!-- Contenedor principal del email -->
+    <table role="presentation" class="email-container" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto; max-width: 600px;">
+        
+        <!-- HEADER -->
+        <tr>
+            <td class="header" style="padding: 30px; text-align: center; background-color: #2c5282; color: #ffffff;">
+                <h1 style="margin: 0; font-size: 28px; font-family: 'DM Serif Text', Georgia, serif;">
+                    🛍️ OFERTAS ESPECIALES
+                </h1>
+                <p style="margin: 10px 0 0 0; font-size: 16px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                    Descuentos increíbles por tiempo limitado
+                </p>
+            </td>
+        </tr>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <tr>
+            <td class="content" style="padding: 30px; background-color: #ffffff;">
+                
+                <!-- Saludo -->
+                <h2 style="color: #2d3748; font-family: 'DM Serif Text', Georgia, serif; margin-top: 0;">
+                    ¡Hola María!
+                </h2>
+                
+                <p style="color: #4a5568; font-family: 'Montserrat Alternates', Arial, sans-serif; line-height: 1.6; font-size: 16px;">
+                    No te pierdas estas ofertas exclusivas. Tenemos descuentos de hasta el 50% en productos seleccionados.
+                </p>
+                
+                <!-- Texto decorativo -->
+                <p class="decorative-text" style="color: #e53e3e; font-family: 'Bad Script', cursive; font-size: 18px; text-align: center; margin: 20px 0;">
+                    "Las mejores ofertas del año están aquí"
+                </p>
+                
+                <!-- Tabla de productos -->
+                <table class="product-table" cellspacing="0" cellpadding="0" border="0" style="width: 100%; border-collapse: collapse; margin: 25px 0;">
+                    <tr>
+                        <th style="background-color: #edf2f7; border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; font-weight: 700;">
+                            Producto
+                        </th>
+                        <th style="background-color: #edf2f7; border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; font-weight: 700;">
+                            Precio Original
+                        </th>
+                        <th style="background-color: #edf2f7; border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; font-weight: 700;">
+                            Precio Oferta
+                        </th>
+                        <th style="background-color: #edf2f7; border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; font-weight: 700;">
+                            Descuento
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            Smartphone XYZ
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-original" style="text-decoration: line-through; color: #999999;">€599</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-discount" style="color: #e53e3e; font-weight: bold; font-size: 18px;">€299</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; color: #38a169; font-weight: bold;">
+                            50%
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7fafc;">
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            Laptop Pro 15"
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-original" style="text-decoration: line-through; color: #999999;">€1,299</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-discount" style="color: #e53e3e; font-weight: bold; font-size: 18px;">€899</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; color: #38a169; font-weight: bold;">
+                            30%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            Auriculares Bluetooth
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-original" style="text-decoration: line-through; color: #999999;">€199</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                            <span class="price-discount" style="color: #e53e3e; font-weight: bold; font-size: 18px;">€129</span>
+                        </td>
+                        <td style="border: 1px solid #e2e8f0; padding: 12px; font-family: 'Montserrat Alternates', Arial, sans-serif; color: #38a169; font-weight: bold;">
+                            35%
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Botón de llamada a la acción -->
+                <table cellspacing="0" cellpadding="0" border="0" style="margin: 30px 0;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <a href="#" class="button" style="background-color: #3182ce; color: #ffffff; text-decoration: none; padding: 15px 30px; border-radius: 5px; display: inline-block; font-weight: bold; font-family: 'Montserrat Alternates', Arial, sans-serif; font-size: 16px;">
+                                🛒 COMPRAR AHORA
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Información adicional -->
+                <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; background-color: #fef5e7; border-radius: 8px; margin: 25px 0;">
+                    <tr>
+                        <td style="padding: 20px; text-align: center;">
+                            <p style="margin: 0; color: #744210; font-family: 'Montserrat Alternates', Arial, sans-serif; font-size: 14px;">
+                                ⚡ <strong>Oferta válida hasta el 30 de septiembre de 2025</strong><br>
+                                📦 Envío gratuito en pedidos superiores a €50<br>
+                                🔄 30 días de garantía de devolución
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- FOOTER -->
+        <tr>
+            <td class="footer" style="padding: 30px; background-color: #f7fafc; color: #666666; text-align: center;">
+                
+                <!-- Información de contacto -->
+                <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; margin-bottom: 20px;">
+                    <tr>
+                        <td style="text-align: center; font-family: 'Montserrat Alternates', Arial, sans-serif; font-size: 14px; color: #666666;">
+                            <strong class="gothic-text" style="font-family: 'UnifrakturCook', cursive; font-size: 16px;">TechStore España</strong><br>
+                            Calle Mayor 123, 28001 Madrid<br>
+                            📧 info@techstore.es | 📞 +34 91 123 4567
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Enlaces sociales -->
+                <table cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                    <tr>
+                        <td style="padding: 0 10px;">
+                            <a href="#" style="color: #3182ce; text-decoration: none; font-family: 'Montserrat Alternates', Arial, sans-serif;">Facebook</a>
+                        </td>
+                        <td style="padding: 0 10px;">
+                            <a href="#" style="color: #3182ce; text-decoration: none; font-family: 'Montserrat Alternates', Arial, sans-serif;">Twitter</a>
+                        </td>
+                        <td style="padding: 0 10px;">
+                            <a href="#" style="color: #3182ce; text-decoration: none; font-family: 'Montserrat Alternates', Arial, sans-serif;">Instagram</a>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Enlaces legales -->
+                <p style="margin: 20px 0 0 0; font-size: 12px; color: #999999; font-family: 'Montserrat Alternates', Arial, sans-serif;">
+                    <a href="#" style="color: #666666;">Política de Privacidad</a> | 
+                    <a href="#" style="color: #666666;">Términos de Uso</a> | 
+                    <a href="#" style="color: #666666;">Darse de Baja</a>
+                </p>
+                
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>
