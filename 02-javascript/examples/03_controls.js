@@ -38,3 +38,33 @@ console.log(test); // 'por fuera'
 const message3 = sameNames && samePrices ? 'Mismos productos' : 'Son diferentes';
 
 console.log(message3);
+
+const day = '';
+let message4 = '';
+switch (day) {
+  case 'lunes':
+    message4 = 'Hay clase';
+    break;
+  case 'martes':
+    message4 = 'Hay clase';
+    break;
+  default:
+    message4 = 'No hay clase';
+    break;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
