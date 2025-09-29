@@ -1,53 +1,134 @@
-# Logs
+# Archivo .gitignore Combinado y Optimizado
+# Basado en plantillas Node, Windows y tus exclusiones personalizadas.
+
+# =================================================================
+# Dependencias y Salidas de Build
+# =================================================================
+node_modules/       # Directorio de dependencias de Node
+jspm_packages/
+web_modules/        # Snowpack
+bower_components
+.next/              # Next.js build output
+out/                # Next.js export output
+.nuxt/              # Nuxt.js build / generate output
+dist/               # General distribution output
+dist-ssr/
+.svelte-kit/        # SvelteKit build / generate output
+.vuepress/dist/     # vuepress build output
+.temp/              # vuepress v2.x temp
+.docusaurus/        # Docusaurus cache and generated files
+.turbo/             # Caché de TurboRepo (si lo usas)
+
+# =================================================================
+# Logs, Cachés y Archivos de Diagnóstico
+# =================================================================
+# Logs y reportes de runtime
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
+.pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-node_modules
-dist
-dist-ssr
-*.local
+# Cachés y directorios temporales
+.cache              # parcel-bundler cache
+.parcel-cache
+.npm                # Optional npm cache directory
+.eslintcache        # Optional eslint cache
+.stylelintcache     # Optional stylelint cache
+.rpt2_cache/        # Microbundle cache
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+*.tsbuildinfo       # TypeScript cache
+.grunt              # Grunt intermediate storage
+.nyc_output         # nyc test coverage
+.fusebox/           # FuseBox cache
+.webpack/           # Serverless Webpack directories
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Cobertura de tests
+coverage
+*.lcov
+
+# =================================================================
+# Archivos de Entorno y Configuración de Runtime
+# =================================================================
+# Variables de entorno (.env files)
+.env
+.env.local
+.env.development
+.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+*.local             # Cualquier archivo con extensión .local (personalizado)
+
+# Archivos de runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history  # Optional REPL history
+.lock-wscript       # node-waf configuration
+.yarn-integrity     # Yarn Integrity file
+*.tgz               # Output of 'npm pack'
+
+# DynamoDB Local
+.dynamodb/
+
+# =================================================================
+# Firebase y Serveless
+# =================================================================
+firebase-config.js          # Archivo de configuración que puede contener claves/datos sensibles
+functions/.runtimeconfig.json # Archivo de configuración de Firebase Functions (puede ser sensible)
+.firebase/                  # Ignorar la carpeta de caché y configuración de Firebase Hosting
+.serverless/                # Serverless directories
+
+# =================================================================
+# Archivos de Sistema Operativo y Editores (OS/IDE)
+# =================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump         # Dump file
+[Dd]esktop.ini      # Folder config file
+$RECYCLE.BIN/       # Recycle Bin
+*.cab               # Windows Installer files
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk               # Windows shortcuts
+
+# macOS
 .DS_Store
+
+# VS Code y otros IDEs
+.vscode/
+!.vscode/extensions.json # EXCEPTUAR este archivo para compartir extensiones recomendadas
+.idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-# Dependencias
-node_modules/
-.next/
-.turbo/
+.tern-port          # TernJS port file
+.vscode-test        # Stores VSCode versions used for testing VSCode extensions
 
-# Archivos de entorno
-.env
-.env.local
-.env.development
-.env.production
+# =================================================================
+# Miscelánea
+# =================================================================
+scripts/            # Directorio de ejecutables (si no quieres que estén en el repo)
+**/*.sh             # Archivos shell ejecutables
+build/Release       # Compiled binary addons
 
-# Archivos del sistema
-.DS_Store
-Thumbs.db
-
-#Ejecutables
-scripts/
-**/*.sh
-
-#Firebase
-firebase-config.js
-functions/.runtimeconfig.json
-
-# Ignorar la carpeta de caché de Firebase Hosting
-.firebase/
-
-.vscode
-
-
+# Yarn v2+ (Plug'n'Play)
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*

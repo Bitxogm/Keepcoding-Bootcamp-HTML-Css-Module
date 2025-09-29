@@ -1,57 +1,30 @@
-console.log('04')
-
-let username = 'Pepe    ';
-let  password = ' Segura1234  ';
-let email = true
-
-username = username.toLowerCase().trim().toUpperCase();
+console.log('04');
+let username = '   KeepCOding    ';
+let password = '   Segura1234  ';
+username = username.trim().toLowerCase();
 password = password.trim();
 
-
 let message = '';
-if (username === 'PEPE' && password === 'Segura1234' && email == '1') {
-  message = 'Bienvenido pepe';
+
+if (username === 'keepcoding' && password === 'Segura1234') {
+  message = 'Tienes acceso';
 } else {
-  message = 'No te reconozco';
-}
-console.log(message);
-
-const emailPepe = ' pepe@.com  ';
-
-console.log(emailPepe.trim().includes('@'));
-console.log(emailPepe.replace('e', 'a'));
-console.log(emailPepe.replaceAll('e', 'a'));
-console.log(emailPepe.match('e'));
-console.log(emailPepe.length);
-
-const newPrice = '122.33'
-console.log(parseInt(newPrice));
-console.log(parseFloat(newPrice));
-console.log(Number(newPrice));
-console.log(+newPrice);
-
-const email2 = prompt('Ingrese su email');
-if(email2 === null){
-  //Lanzamos error propio
-  throw new Error('El email es requerido');
+  message = 'No tienes acceso';
 }
 
+const email = '  Test@test.com  ';
 
+console.log(email.trim().toLowerCase().includes('@keepcoding')) // true | false
+console.log(email.trim().toLowerCase().replaceAll('test', '*****'));
+console.log(email.trim().length);
 
+const promptPrice = '12';
+console.log(parseInt(promptPrice));
+console.log(Number(promptPrice));
+console.log(+promptPrice);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const email2 = prompt('Dime un correo');
+if (!email2) {
+  // Lanzar un error propio
+  throw new Error('Email requerido');
+}

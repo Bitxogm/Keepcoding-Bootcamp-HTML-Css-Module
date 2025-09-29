@@ -9,8 +9,12 @@ Este repositorio es mi portafolio personal y un registro de mi progreso a lo lar
 Aquí se listan los módulos y temas principales. Haz clic en los enlaces para explorar los ejercicios y proyectos de cada uno.
 
 - **Frontend:**
-  - 🌐 **HTML y CSS:** [Enlace a la carpeta/ejercicios]
-  - ⚛️ **JavaScript (ES6+):** [Enlace a la carpeta/ejercicios]
+  - 🌐 **HTML y CSS:** 
+     -  **Teoria** ->  https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/01-HTML-CSS
+     -  **Prueba practica** ->  https://github.com/Bitxogm/Portfolio-Obama
+  - ⚛️ **JavaScript (ES6+):** 
+     -  **Teoria** ->  https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/02-javascript
+     -  **Prueba practica** -> https://github.com/Bitxogm/ModuloJS-Ejercicios
   - 🎨 **React:** [Enlace a la carpeta/ejercicios]
   - 📦 **Herramientas de Build:** [Enlace a la carpeta/ejercicios]
 
@@ -41,9 +45,9 @@ Aquí se listan los módulos y temas principales. Haz clic en los enlaces para e
 
 ## 🎓 Sobre el Autor
 
-- **Nombre:** [Tu Nombre]
-- **Perfil de LinkedIn:** [Enlace a tu perfil de LinkedIn]
-- **Perfil de GitHub:** [Enlace a tu perfil de GitHub]
+- **Nombre:** Victor M. Gonzalez
+- **Perfil de LinkedIn:** https://www.linkedin.com/in/victor-manuel-gonzalez-moreno/
+- **Perfil de GitHub:** https://github.com/Bitxogm
 
 ---
 
