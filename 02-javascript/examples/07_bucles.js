@@ -106,3 +106,42 @@ const usersProducts = [
 
 console.log(usersProducts[1]); // ['Cap', 'T-shirt']
 console.log(usersProducts[1][1]); // T-shirt
+
+
+let products = ''
+for (let index = 0; index < usersProducts.length; index++) {
+  const row = usersProducts[index];
+  products = `${products} ${row.join(',')}`
+  
+  
+  // const element = usersProducts[index];
+  // console.log(element);
+  // for( const column of row)
+  //   products = `${products}, ${column}`
+}
+
+const tree = [
+  ['--*--'],
+  ['-***-'],
+  ['*****']
+];
+
+let element = ''
+for (let index = 0; index < tree.length; index++) {
+  const column = tree[index];
+  for (const element of column) {
+    console.log( `${element} `)
+  }
+};
+
+
+// const pattern = [
+//   ['-', '-', '*', '-', '-'],  
+//   ['-', '*', '*', '*', '-'], 
+//   ['*', '*', '*', '*', '*']   
+// ];
+
+
+// for (let row of pattern) {
+//   console.log(row.join('')); 
+// }
