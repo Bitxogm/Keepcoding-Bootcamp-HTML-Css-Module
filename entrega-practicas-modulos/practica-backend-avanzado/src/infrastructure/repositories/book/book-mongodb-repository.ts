@@ -1,0 +1,176 @@
+import { bookFindQuery } from '@/domain/types/BookFindQuery';
+import { Book } from '@domain/entities/Book';
+import { IBookRepository } from '@domain/repositories/BookRepository';
+import { BookModelMongoose as BookModel } from '@infrastructure/models/book.model';
+
+export class BookMongodbRepository implements IBookRepository {
+  async findByOwnerId(ownerId: string): Promise<Book[]> {
+    const booksFromDb = await BookModel.find({ ownerId }).exec();
+
+    return booksFromDb.map(book => {
+      return new Book({
+        id: book._id.toString(),
+        title: book.title,
+        description: book.description,
+        price: book.price,
+        author: book.author,
+        status: book.status,
+        ownerId: book.ownerId.toString(),
+        soldAt: book.soldAt,
+      });
+    });
+  }
+
+  async findOldPublishedBooks(daysOld: number): Promise<Book[]> {
+    const thresholdDate = new Date();
+    thresholdDate.setDate(thresholdDate.getDate() - daysOld);
+
+    const booksFromDb = await BookModel.find({
+      status: 'PUBLISHED',
+      createdAt: { $lt: thresholdDate },
+    }).exec();
+
+    return booksFromDb.map(book => {
+      return new Book({
+        id: book._id.toString(),
+        title: book.title,
+        description: book.description,
+        price: book.price,
+        author: book.author,
+        status: book.status,
+        ownerId: book.ownerId.toString(),
+        soldAt: book.soldAt,
+      });
+    });
+  }
+  async update(book: Book): Promise<Book | null> {
+    const updatedBook = await BookModel.findByIdAndUpdate(
+      book.id,
+      {
+        title: book.title,
+        description: book.description,
+        price: book.price,
+        author: book.author,
+        status: book.status,
+        ownerId: book.ownerId,
+        soldAt: book.soldAt,
+      },
+      { new: true }
+    );
+
+    if (!updatedBook) {
+      return null;
+    }
+
+    return new Book({
+      id: updatedBook._id.toString(),
+      title: updatedBook.title,
+      description: updatedBook.description,
+      price: updatedBook.price,
+      author: updatedBook.author,
+      status: updatedBook.status,
+      ownerId: updatedBook.ownerId.toString(),
+      soldAt: updatedBook.soldAt,
+    });
+  }
+  async delete(id: string): Promise<Book | null> {
+    const deletedBook = await BookModel.findByIdAndDelete(id);
+
+    if (!deletedBook) {
+      return null;
+    }
+
+    return new Book({
+      id: deletedBook._id.toString(),
+      title: deletedBook.title,
+      description: deletedBook.description,
+      price: deletedBook.price,
+      author: deletedBook.author,
+      status: deletedBook.status,
+      ownerId: deletedBook.ownerId.toString(),
+      soldAt: deletedBook.soldAt,
+    });
+  }
+
+  async findById(id: string): Promise<Book | null> {
+    const bookFromDb = await BookModel.findById(id);
+
+    if (!bookFromDb) {
+      return null;
+    }
+
+    return new Book({
+      id: bookFromDb._id.toString(),
+      title: bookFromDb.title,
+      description: bookFromDb.description,
+      price: bookFromDb.price,
+      author: bookFromDb.author,
+      status: bookFromDb.status,
+      ownerId: bookFromDb.ownerId.toString(),
+      soldAt: bookFromDb.soldAt,
+    });
+  }
+
+  async getAll({ page, limit, author, title }: bookFindQuery): Promise<Book[]> {
+    const searchQuery: Record<string, any> = { status: 'PUBLISHED' };
+    if (author) {
+      searchQuery.author = new RegExp(author, 'i');
+    }
+
+    if (title) {
+      searchQuery.title = new RegExp(title, 'i');
+    }
+    const skip = (page - 1) * limit;
+
+    const booksFromDb = await BookModel.find(searchQuery).skip(skip).limit(limit).exec();
+
+    return booksFromDb.map(book => {
+      return new Book({
+        id: book._id.toString(),
+        title: book.title,
+        description: book.description,
+        price: book.price,
+        author: book.author,
+        status: book.status,
+        ownerId: book.ownerId.toString(),
+        soldAt: book.soldAt,
+      });
+    });
+  }
+
+  async createOneBook({
+    title,
+    description,
+    price,
+    author,
+    ownerId,
+  }: {
+    title: string;
+    description: string;
+    price: number;
+    author: string;
+    ownerId?: string;
+  }): Promise<Book> {
+    const newBook = new BookModel({
+      title,
+      description,
+      price,
+      author,
+      ownerId: ownerId || '000000000000000000000000',
+      status: 'PUBLISHED',
+    });
+
+    const savedBook = await newBook.save();
+
+    return new Book({
+      id: savedBook._id.toString(),
+      title: savedBook.title,
+      description: savedBook.description,
+      price: savedBook.price,
+      author: savedBook.author,
+      status: savedBook.status,
+      ownerId: savedBook.ownerId.toString(),
+      soldAt: savedBook.soldAt,
+    });
+  }
+}

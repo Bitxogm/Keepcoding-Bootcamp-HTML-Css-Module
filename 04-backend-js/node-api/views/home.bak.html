@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeepCoding Web Bootcamp XIX</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body>
+    <h1>Server Node.js</h1>
+    <p>Author: KeepCoding Web Bootcamp XIX - From EJS</p>
+    <p>Environment: <%= env %> | Date: <%= now %></p>
+
+    <ul>
+        <% for(let i = 0; i < 5; i++) { %>
+            <li>Elemento <%- i + 1 %></li>
+        <% } %>   
+    </ul>
+    
+    <%- include('./_footer.html') %>
+</body>
+</html>

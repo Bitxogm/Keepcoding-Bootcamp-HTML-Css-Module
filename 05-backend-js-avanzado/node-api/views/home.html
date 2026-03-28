@@ -1,0 +1,69 @@
+<%- include('_header.html') %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="mb-4">🎉 Bienvenido a <%= appName %></h1>
+      
+      <div class="alert alert-info" role="alert">
+        <h4 class="alert-heading">API REST con Node.js + MongoDB</h4>
+        <p>Esta aplicación incluye:</p>
+        <ul class="mb-0">
+          <li>✅ Express.js + MongoDB/Mongoose</li>
+          <li>✅ Autenticación segura con bcrypt</li>
+          <li>✅ Validaciones con express-validator</li>
+          <li>✅ Rate limiting</li>
+          <li>✅ Security logs</li>
+          <li>✅ Account locking después de 5 intentos fallidos</li>
+        </ul>
+        <hr>
+        <div class="d-flex gap-2">
+          <a href="/api" class="btn btn-primary" target="_blank">📚 Ver API</a>
+          <a href="/login" class="btn btn-success">🔐 Login</a>
+        </div>
+      </div>
+      
+      <!-- Cards -->
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">📚 API REST</h5>
+              <p class="card-text">Endpoints completos para Users y Agents con validaciones.</p>
+              <a href="/api" class="btn btn-sm btn-outline-primary" target="_blank">Explorar API</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">🔐 Seguridad</h5>
+              <p class="card-text">Sistema completo de autenticación y protección.</p>
+              <a href="/login" class="btn btn-sm btn-outline-success">Probar Login</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">👥 Gestión</h5>
+              <p class="card-text">CRUD completo de usuarios y agentes.</p>
+              <a href="/api/agents" class="btn btn-sm btn-outline-info" target="_blank">Ver Agentes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Credenciales de prueba -->
+      <div class="alert alert-secondary mt-4" role="alert">
+        <h5>🔑 Credenciales de prueba:</h5>
+        <code>user@example.com</code> / <code>Secreto123!</code> (usuario)<br>
+        <code>admin@example.com</code> / <code>Admin123!</code> (admin)
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('_footer.html') %>

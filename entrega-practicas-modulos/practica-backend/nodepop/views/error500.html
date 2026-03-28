@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || '500 - Error del Servidor' %></title>
+    
+    <link rel="stylesheet" type="text/css" href="/stylesheets/error500.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/oxygen.fonts.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/error-pages.css">
+</head>
+
+<body>
+    <!-- Banner de desarrollo -->
+    <% if (env === 'development') { %>
+        <%- include('./_environment.html') %>
+    <% } %>
+
+    <div class="container">
+        <!-- Sección de error -->
+        <div class="error">
+            <h1>500</h1>
+            <h2>error</h2>
+            <p>
+                Oh no, algo ha fallado. Inténtalo de nuevo más tarde. 
+                Si el problema continúa, por favor, ponte en contacto con el administrador.
+            </p>
+            <p class="subtitle">ERR_INTERNAL_SERVER_ERROR</p>
+            
+            <div class="error-actions">
+                <a href="/" class="btn-home">Volver al inicio</a>
+                <button onclick="window.location.reload()" class="btn-retry">Reintentar</button>
+            </div>
+        </div>
+
+        <!-- Imagen de error -->
+        <div class="stack-container">
+            <img src="/assets/img/500_error.png" alt="Error 500" class="error-image pokeup">
+        </div>
+
+        <footer>
+            <%- include('./_footer.html') %>
+        </footer>
+    </div>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+</body>
+</html>

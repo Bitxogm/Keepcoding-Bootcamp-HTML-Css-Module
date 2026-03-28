@@ -1,71 +1,52 @@
-# 🚀 Repositorio del Bootcamp Fullstack Web Developer
+# 🚀 Bootcamp Fullstack Web Developer — KeepCoding XIX
 
-Este repositorio es mi portafolio personal y un registro de mi progreso a lo largo del bootcamp de **Desarrollo Web Fullstack** en **Keepcoding**. Aquí encontrarás ejercicios, proyectos y apuntes sobre los diferentes módulos y tecnologías que hemos cubierto.
-
----
-
-## 📚 Módulos y Temas
-
-Aquí se listan los módulos y temas principales. Haz clic en los enlaces para explorar los ejercicios y proyectos de cada uno.
-
-- **Frontend:**
-  - 🌐 **HTML y CSS:** 
-     -  **Teoria** ->  https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/01-HTML-CSS
-     -  **Prueba practica** ->  https://github.com/Bitxogm/Portfolio-Obama
-  - ⚛️ **JavaScript (ES6+):** 
-     -  **Teoria** ->  https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/02-javascript
-     -  **Prueba practica** -> https://github.com/Bitxogm/ModuloJS-Ejercicios
-  - 🎨 **React:** [Enlace a la carpeta/ejercicios]
-  - 📦 **Herramientas de Build:** [Enlace a la carpeta/ejercicios]
-
-- **Backend:**
-  - 💻 **Node.js y Express:** [Enlace a la carpeta/ejercicios]
-  - ⚙️ **Bases de Datos:**
-    - 🐘 **PostgreSQL:** [Enlace a la carpeta/ejercicios]
-    - ⚡ **MongoDB:** [Enlace a la carpeta/ejercicios]
-  - 🔐 **Autenticación y Seguridad:** [Enlace a la carpeta/ejercicios]
+Repositorio principal de mi paso por el bootcamp de Desarrollo Web Fullstack en KeepCoding. Recoge los módulos de teoría y todas las prácticas evaluadas, organizados por módulo.
 
 ---
 
-## ✨ Proyectos Destacados
+## 📚 Módulos de Teoría
 
-- 🛒 **Tienda Online con React y Node.js:** Una aplicación completa de e-commerce. [Enlace al proyecto]
-- 📝 **API RESTful:** Creación de una API para un blog. [Enlace al proyecto]
-
----
-
-## 🛠️ Tecnologías Usadas
-
-- **Frontend:** `HTML5`, `CSS3`, `JavaScript ES6+`, `React`
-- **Backend:** `Node.js`, `Express.js`
-- **Bases de Datos:** `PostgreSQL`, `MongoDB`
-- **Otros:** `Git`, `GitHub`, `VS Code`
+| # | Módulo | Contenido |
+|---|--------|-----------|
+| 01 | 🌐 HTML & CSS | [Ver módulo](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/01-html-css) |
+| 02 | ⚡ JavaScript ES6+ | [Ver módulo](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/02-javascript) |
+| 03 | 🗄️ Modelado de Datos & SQL | [Ver módulo](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/03-modelado-datos-sql) |
+| 04 | 🖥️ Backend con Node.js | [Ver módulo](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/04-backend-js) |
+| 05 | 🔧 Backend Avanzado | [Ver módulo](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/05-backend-js-avanzado) |
 
 ---
 
-## 🎓 Sobre el Autor
+## 🎯 Prácticas Evaluadas
 
-- **Nombre:** Victor M. Gonzalez
-- **Perfil de LinkedIn:** https://www.linkedin.com/in/victor-manuel-gonzalez-moreno/
-- **Perfil de GitHub:** https://github.com/Bitxogm
+| Práctica | Descripción | Enlace |
+|----------|-------------|--------|
+| HTML & CSS | Maquetación y estilos con HTML5 y CSS3 | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-html-css) |
+| Intro JavaScript | Ejercicios de fundamentos JS | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-intro-js) |
+| Modelado SQL | Diseño de base de datos relacional | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-modelado-datos-sql) |
+| Backend Node.js | API REST con Express y Node | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-backend) |
+| GuayaPop — Frontend JS | Marketplace de segunda mano con JS vanilla | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-frontend-js) |
+| React — Fundamentos | Aplicación React con hooks y gestión de estado | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-react) |
+| Backend Avanzado | API con autenticación, MongoDB y arquitectura hexagonal | [Ver práctica](https://github.com/Bitxogm/bootcamp-keepcoding-XIX/tree/main/entrega-practicas-modulos/practica-backend-avanzado) |
+| Next.js — React Avanzado | Marketplace fullstack con Next.js 14 *(en evaluación)* | [Ver repo](https://github.com/Bitxogm/react-avanzado-practica) |
 
 ---
 
-## 🚀 Cómo Usar este Repositorio
+## 🛠️ Tecnologías del Bootcamp
 
-Puedes clonar este repositorio para revisar el código.
+**Frontend:** `HTML5` `CSS3` `JavaScript ES6+` `React` `Next.js 14`
 
-```bash
+**Backend:** `Node.js` `Express.js` `REST APIs`
 
-**Explicación de los elementos de Markdown:**
+**Bases de datos:** `PostgreSQL` `MongoDB` `Prisma` `Mongoose`
 
-* `#` y `##`: Se usan para los títulos. Cuantos más `#` pongas, más pequeño será el título. `#` es para el título principal, `##` para los subtítulos, y así sucesivamente.
-* `---`: Crea una línea horizontal para separar secciones, lo que hace el `README` más legible.
-* `**texto**`: Pone el texto en **negrita**.
-* `* texto`: Crea una lista con viñetas. Puedes usar `-` también.
-* `[texto del enlace](URL del enlace)`: Esto crea un hipervínculo. Por ejemplo, `[GitHub](https://github.com)` se verá como GitHub.
-* \`código\`: Pone el texto en formato de `código inline`.
-* \`\`\`lenguaje\`: Crea un bloque de código. Escribir el lenguaje (como `bash` en el ejemplo) le añade resaltado de sintaxis (colores) para que sea más fácil de leer.
-* `:emoji_name:`: Puedes usar atajos para emojis, como `:rocket:` para 🚀. En [esta página](https://gist.github.com/rxaviers/7360908) puedes encontrar muchos más.
+**Herramientas:** `Git` `GitHub` `Docker` `JWT` `Vitest` `Jest`
 
-¿Qué te parece esta estructura? Puedes copiar y pegar este código en tu archivo `README.md` y luego personalizarlo con tus propios enlaces y proyectos.
+---
+
+## 👤 Autor
+
+**Víctor M. González**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-victor--manuel--gonzalez--moreno-blue?logo=linkedin)](https://www.linkedin.com/in/victor-manuel-gonzalez-moreno/)
+[![GitHub](https://img.shields.io/badge/GitHub-Bitxogm-black?logo=github)](https://github.com/Bitxogm)
+[![Portfolio](https://img.shields.io/badge/Portfolio-bitxodev.com-orange)](https://bitxodev.com)

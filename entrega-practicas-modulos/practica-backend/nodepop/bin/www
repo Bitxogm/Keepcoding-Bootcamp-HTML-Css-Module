@@ -1,0 +1,20 @@
+import http from 'node:http';
+import app from '../app.js';
+
+
+const PORT = process.env.PORT || 3000;
+const ENV = process.env.NODE_ENV || 'production';
+
+
+const server = http.createServer(app);
+
+server.listen(PORT, () => {
+    console.log(`[${ENV.toUpperCase()}] - Server running on http://localhost:${PORT}`);
+    console.log('\n' + '='.repeat(60));
+    console.log(`✅ [${ENV.toUpperCase()}] Server Ready`);
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`☠️  Press CTRL + C to Stop Server`);
+});
+
+
+

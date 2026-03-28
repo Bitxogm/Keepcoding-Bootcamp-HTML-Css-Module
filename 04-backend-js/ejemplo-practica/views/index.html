@@ -1,0 +1,106 @@
+<%- include('partials/_header.html') %>
+
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>Nodepop - Products</h1>
+      <a class="btn btn-outline-success" href="/products/new">Add Product</a>
+    </div>
+
+    <% if (products.length===0) { %>
+      <p>No products available.</p>
+      <% } else { %>
+
+        <!-- Products filter -->
+        <form class="row g-3 mt-3 mb-3" method="GET" action="/">
+          <div class="col-md-3">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              placeholder="Product Name"
+              value="<%= filters.name %>"
+            >
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" name="tag">
+              <option value="">All Tags</option>
+              <% tags.forEach(function(tag) { %>
+                <option value="<%= tag %>" <%= filters.tag === tag ? 'selected' : '' %>>
+                  <%= tag %>
+                </option>
+                <% }); %>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <input
+              type="number"
+              step="0.01"
+              class="form-control"
+              name="priceMin"
+              placeholder="Min Price"
+              value="<%= filters.priceMin || '' %>"
+            >
+          </div>
+          <div class="col-md-2">
+            <input
+              type="number"
+              step="0.01"
+              class="form-control"
+              name="priceMax"
+              placeholder="Max Price"
+              value="<%= filters.priceMax || '' %>"
+            >
+          </div>
+          <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Filter</button>
+          </div>
+        </form>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <% products.forEach(function(product) { %>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <%= product.name %>
+                  </h5>
+                  <p class="card-text">Price: <%= product.price.toFixed(2) %> €</p>
+                  <% product.tags.forEach(function(tag) { %>
+                    <span class="badge bg-secondary">
+                      <%= tag %>
+                    </span>
+                    <% }); %>
+                </div>
+                <div class="card-footer d-flex justify-content-end gap-2">
+                  <form action="/products/delete/<%= product._id %>" method="POST" style="display: inline;">
+                    <button class="btn btn-outline-danger">Delete</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+        </div>
+        <!-- Pagination Controls -->
+        <nav aria-label="Page navigation" class="mt-4">
+          <ul class="pagination justify-content-center">
+            <% for (let i = 1; i <= totalPages; i++) { %>
+              <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                <a class="page-link" href="?page=<%= i %><%=
+                  filters.name ? '&name=' + encodeURIComponent(filters.name) : '' %><%=
+                  filters.tag ? '&tag=' + encodeURIComponent(filters.tag) : '' %><%=
+                  filters.priceMin ? '&priceMin=' + filters.priceMin : '' %><%=
+                  filters.priceMax ? '&priceMax=' + filters.priceMax : '' %>">
+                  <%= i %>
+                </a>
+              </li>
+              <% } %>
+          </ul>
+        </nav>
+        
+        <% } %>
+
+  </div>
+
+
+  <%- include('partials/_footer.html') %>
